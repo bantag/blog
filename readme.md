@@ -15,4 +15,4 @@ git commit -m "comment"
 
 git push -u origin master
 
-https://blog.muva.tech/lesson-5-post-migration-user-account-blog-application-laravel-5-5/
+https://blog.muva.tech/lesson-7-creating-showing-post-dashboard-blog-application-laravel-5-5/

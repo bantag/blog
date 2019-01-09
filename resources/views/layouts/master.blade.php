@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ URL::to('public/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('public/css/dashboard.css') }}">
     @yield('styles')
 </head>
 <body>
