@@ -4,6 +4,7 @@
 git clone https://github.com/bantag/blog.git
 
 git config --global user.name "bantag"
+
 git config --global user.email "mkchoudharyji@gmail.com"
 
 git add .
