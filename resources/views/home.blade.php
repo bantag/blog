@@ -22,6 +22,34 @@
                         <button type="button" class="btn btn-primary btn-sm">Create Post</button>
                     </a>
                 </h1>
+
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Posted On</th>
+                            <th>Posted By</th>
+                            <th>Action</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <?php $count=0 ?>
+                        @foreach ($posts as $post)
+                        <?php $count++ ?>
+                        
+                            <tr>
+                                <td>{{$count}}</td>
+                                <td>{{$post->title}}</td>
+                                <td>{{$post->created_at->format('d/M/Y')}}</td>
+                                <td>{{$post->user->name}}</td>
+                            <td><a href="{{ route('post.edit',$post->id)  }}">Edit<a>&nbsp; &nbsp; <a href="{{ route('post.delete',['id'=>$post->id]) }}">Delete</a> </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+
                 @if(Session::has('success'))
                 <div class="row">
                     <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">

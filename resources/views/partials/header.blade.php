@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-    <a class="navbar-brand" href="#">Henry-Lab</a>
+<a class="navbar-brand" href="{{route('showPost')}}">My Blog</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,6 +15,8 @@
                     <a class="dropdown-item" href="{{ route('register') }}">Sign up</a>
                     <a class="dropdown-item" href="{{ route('login') }}">Sign in</a>
                     @else
+                <a href="{{route('home')}}">Home</a>
+                <hr>
                         <a href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
